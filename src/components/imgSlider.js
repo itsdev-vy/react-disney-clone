@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 
 const ImgSlider = (props) => {
@@ -13,19 +13,33 @@ const ImgSlider = (props) => {
         autoplay: true,
     };
     return (
-        <Slider {...settings}>
-            <div>
-                <h3>1</h3>
-            </div>
-            <div>
-                <h3>2</h3>
-            </div>
-            <div>
-                <h3>3</h3>
-            </div>
-        </Slider>
-    )
-}
+        <Carousel {...settings}>
+            <Wrap>
+                <a>
+                    <img src="/images/slider-badging.jpg" alt="" />
+                </a>
+            </Wrap>
+
+            <Wrap>
+                <a>
+                    <img src="/images/slider-scale.jpg" alt="" />
+                </a>
+            </Wrap>
+
+            <Wrap>
+                <a>
+                    <img src="/images/slider-badag.jpg" alt="" />
+                </a>
+            </Wrap>
+
+            <Wrap>
+                <a>
+                    <img src="/images/slider-scales.jpg" alt="" />
+                </a>
+            </Wrap>
+        </Carousel>
+    );
+};
 
 const Carousel = styled(Slider)`
   margin-top: 20px;
@@ -83,4 +97,4 @@ const Wrap = styled.div`
   }
 `;
 
-export default ImgSlider
+export default ImgSlider;
